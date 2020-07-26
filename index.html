@@ -1,0 +1,23 @@
+<html>
+<header>
+<title>POS</title>
+</header>
+
+<body>
+    <input type="text" id="myText" value="setpos ; setang">
+    <button onclick="myFunction1()">Position</button>
+    <p id="position"></p>
+    
+    <script>
+    function myFunction1() {
+        var str = document.getElementById("myText").value;
+        document.getElementById("position").innerHTML = str;
+        
+        var br1 = "</blockquote>}";
+        var str2 = "\"";
+        var res = str.replace("setpos ", "\"\"<br />{<blockquote>\"origin\" \"").replace(";", "\"<br />").replace("setang ", "\"angles\" \"").concat(str2, br1);
+        document.getElementById("position").innerHTML = res;
+    }
+    </script>   
+</body>
+</html>
